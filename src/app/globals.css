@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #050505;
+  --foreground: #ffffff;
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-[var(--glass)] border border-[var(--glass-border)] backdrop-blur-md;
+  }
+  
+  .neon-text {
+    @apply text-accent drop-shadow-[0_0_8px_rgba(0,243,255,0.5)];
+  }
+
+  .neon-border {
+    @apply border-accent/50 shadow-[0_0_15px_rgba(0,243,255,0.2)];
+  }
+}

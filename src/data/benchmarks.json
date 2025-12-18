@@ -1,0 +1,16 @@
+{
+    "benchmarks": [
+        {
+            "id": "intro-placeholder",
+            "model": "System",
+            "category": "Fractal",
+            "code": "<!DOCTYPE html><html><body style='background:#000;color:#0ff;display:flex;justify-content:center;align-items:center;height:100vh;margin:0;font-family:monospace;'><h1>READY FOR RENDER</h1></body></html>",
+            "scores": {
+                "beauty": 10,
+                "coherence": 10,
+                "precision": 10
+            },
+            "description": "System placeholder for the initial load."
+        }
+    ]
+}
