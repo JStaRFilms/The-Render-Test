@@ -66,7 +66,7 @@ export default function Gallery({ data }: GalleryProps) {
 
                 <div className="flex-1 min-h-0 flex flex-col">
                     {activeTab === "preview" ? (
-                        <LivePreview code={selectedBenchmark.code} />
+                        <LivePreview key={selectedId} code={selectedBenchmark.code} />
                     ) : (
                         <CodeView code={selectedBenchmark.code} />
                     )}

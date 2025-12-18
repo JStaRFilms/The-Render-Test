@@ -1,26 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { } from "react";
 
 interface LivePreviewProps {
     code: string;
 }
 
 export default function LivePreview({ code }: LivePreviewProps) {
-    const iframeRef = useRef<HTMLIFrameElement>(null);
-
-    useEffect(() => {
-        if (iframeRef.current) {
-            const iframe = iframeRef.current;
-            const doc = iframe.contentDocument || iframe.contentWindow?.document;
-            if (doc) {
-                doc.open();
-                doc.write(code);
-                doc.close();
-            }
-        }
-    }, [code]);
-
     return (
         <div className="flex-1 h-full glass-panel rounded-2xl overflow-hidden relative group">
             {/* Decorative Border Glow */}
@@ -35,10 +21,10 @@ export default function LivePreview({ code }: LivePreviewProps) {
             </div>
 
             <iframe
-                ref={iframeRef}
                 title="Live Preview"
                 className="w-full h-full border-none bg-black"
                 sandbox="allow-scripts allow-modals allow-pointer-lock allow-popups allow-same-origin"
+                srcDoc={code}
             />
 
             {/* Grid Overlay (Subtle) */}
