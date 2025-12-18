@@ -45,3 +45,5 @@ To create a high-end, futuristic gallery that showcases and evaluates the visual
   ]
 }
 ```
+## Next Steps
+- **Model Contributions:** See [CONTRIBUTING_MODELS.md](../CONTRIBUTING_MODELS.md) for how to add new benchmarks.
